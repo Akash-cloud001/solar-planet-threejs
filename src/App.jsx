@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState,Suspense } from 'react'
 import { Canvas } from '@react-three/fiber';
 import './App.css';
 import Pendulum from './components/Pendulum/Pendulum';
-import { Stats, OrbitControls, Environment } from '@react-three/drei'
+import { Html } from '@react-three/drei'
 
 const App = ({children, ...props}) => {
   const canvasRef = useRef(null);
@@ -22,9 +22,11 @@ const App = ({children, ...props}) => {
   },[])
 
 return (
-  <Canvas
+    
+  <div className='h-screen overflow-hidden '>
+    <Canvas
       shadows
-      style={{width:'100%', height:size.height}}
+      style={{width:'100%', height:'100%'}}
       ref={canvasRef}
       onCreated={({gl, camera})=>{
           //set pixel ratio for better resolution as per the machine 
@@ -39,6 +41,7 @@ return (
           <Pendulum />
       </Suspense>
   </Canvas>
+  </div>
 )
 }
 

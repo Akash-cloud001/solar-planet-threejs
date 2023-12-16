@@ -13,9 +13,7 @@ const Moon = () => {
         }
         
     })
-    useEffect(()=>{
-        if(moonRef.current) console.log(moonRef.current)
-    },[moonRef.current])
+
     const textureLoader = new THREE.TextureLoader();
     const texture = textureLoader.load(moon);
   return (

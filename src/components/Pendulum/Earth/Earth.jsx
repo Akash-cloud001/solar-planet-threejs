@@ -17,9 +17,7 @@ const Earth = () => {
         }
     });
 
-    useEffect(()=>{
-        if(earthRef.current) console.log(earthRef.current)
-    },[earthRef.current])
+
   return (
     <>
         <mesh position={[0,0,0]} castShadow rotation={[0,0,0]} ref={earthRef}>

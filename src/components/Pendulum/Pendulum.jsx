@@ -1,10 +1,11 @@
 import React from 'react';
 import {  PerspectiveCamera , OrbitControls} from '@react-three/drei';
-import * as THREE from 'three';
-import space from '../../assets/nightSky.jpg';
 import Earth from './Earth/Earth';
 import Moon from './Moon/Moon';
 import Environment from './Environment/Environment';
+import './Pendulum.css';
+
+
 const Pendulum = () => {
 
     
@@ -13,7 +14,7 @@ const Pendulum = () => {
 
     {/* Camera */}
     <PerspectiveCamera makeDefault position={[0, 2.5, 4]} />
-    <OrbitControls />
+    <OrbitControls minDistance={1} maxDistance={75}/>
 
     {/* Lights */}
     <ambientLight args={["white", 2]} /> 
