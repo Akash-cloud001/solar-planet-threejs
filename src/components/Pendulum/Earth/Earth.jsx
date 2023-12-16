@@ -21,9 +21,8 @@ const Earth = () => {
   return (
     <>
         <mesh position={[0,0,0]} castShadow rotation={[0,0,0]} ref={earthRef}>
-            <sphereGeometry args={[1, 32, 32]} />
-            <meshPhongMaterial map={texture} attach={"material"} side={THREE.DoubleSide}
-        />
+            <sphereGeometry args={[0.5, 32, 32]} />
+            <meshPhongMaterial map={texture} attach={"material"} side={THREE.DoubleSide} />
         </mesh>
     </>
   )

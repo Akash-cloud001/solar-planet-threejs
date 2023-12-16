@@ -8,8 +8,8 @@ const Moon = () => {
 
     useFrame((state)=>{
         if(moonRef.current){
-            moonRef.current.position.x = -2 * Math.cos(state.clock.elapsedTime / 4) ;
-            moonRef.current.position.z = 2 * Math.sin(state.clock.elapsedTime / 4) ; 
+            moonRef.current.position.x = -2 * Math.cos(state.clock.elapsedTime / 24) ;
+            moonRef.current.position.z = 2 * Math.sin(state.clock.elapsedTime / 24) ; 
         }
         
     })
@@ -19,7 +19,7 @@ const Moon = () => {
   return (
     <>
         <mesh position={[-2,0.5,0]} rotation={[0,90,0]} ref={moonRef}>
-            <sphereGeometry args={[0.25, 32,32]}  />
+            <sphereGeometry args={[0.125, 32,32]}  />
             <meshPhongMaterial map={texture} attach={"material"} side={THREE.DoubleSide}/>
         </mesh>
     </>
