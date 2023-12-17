@@ -1,21 +1,28 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import {  PerspectiveCamera , OrbitControls} from '@react-three/drei';
-import Earth from './Earth/Earth';
-import Moon from './Moon/Moon';
-import Environment from './Environment/Environment';
+import Earth from './Earth';
+import Moon from './Moon';
+import Environment from './Environment';
 import './Pendulum.css';
-import Sun from './Sun/Sun';
+import Sun from './Sun';
+import Venus from './Venus';
+import Mercury from './Mercury';
+import Mars from './Mars';
+import Juipter from './Juipter';
+import Saturn from './Saturn';
+import Uranus from './Uranus';
+import Neptune from './Neptune';
 
 
 const Pendulum = () => {
+  const orbitRef = useRef();
 
-    
   return (
    <>
 
     {/* Camera */}
-    <PerspectiveCamera makeDefault position={[50, 2.5, 25]} />
-    <OrbitControls minDistance={1} maxDistance={75}/>
+    <PerspectiveCamera makeDefault position={[0, -1, 1]} />
+    <OrbitControls minDistance={1} maxDistance={75} ref={orbitRef}/>
 
     {/* Lights */}
     <ambientLight args={["white", 2]} /> 
@@ -25,16 +32,21 @@ const Pendulum = () => {
       position={[-10, 0, 0]} 
     /> 
 
-    {/* Sun */}
     <Sun />
 
-    {/* Earth mesh */}
+    <Mercury />
+
+    <Venus />
+
     <Earth />
-    
-    {/* MoonMesh */}
     <Moon />
 
-    {/* Environment */}
+    <Mars />
+    <Juipter />
+    <Saturn />
+    <Uranus />
+    <Neptune />
+
     <Environment />
    </>
   )

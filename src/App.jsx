@@ -31,7 +31,7 @@ return (
       onCreated={({gl, camera})=>{
           //set pixel ratio for better resolution as per the machine 
           gl.setPixelRatio(window.devicePixelRatio);
-          
+
           //Adjust the camera aspect ratio as per the device
           camera.aspect = size.width / size.height;
           camera.updateProjectionMatrix();
