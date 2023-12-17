@@ -22,7 +22,7 @@ const Pendulum = () => {
 
     {/* Camera */}
     <PerspectiveCamera makeDefault position={[0, -1, 1]} />
-    <OrbitControls minDistance={1} maxDistance={75} ref={orbitRef}/>
+    <OrbitControls minDistance={1} maxDistance={90} ref={orbitRef}/>
 
     {/* Lights */}
     <ambientLight args={["white", 2]} /> 

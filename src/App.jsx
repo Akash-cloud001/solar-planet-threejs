@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState,Suspense } from 'react'
 import { Canvas } from '@react-three/fiber';
 import './App.css';
 import Pendulum from './components/Pendulum/Pendulum';
-import { Html } from '@react-three/drei'
 
 const App = ({children, ...props}) => {
   const canvasRef = useRef(null);
@@ -23,7 +22,7 @@ const App = ({children, ...props}) => {
 
 return (
     
-  <div className='h-screen overflow-hidden '>
+  <div className='h-screen overflow-hidden'>
     <Canvas
       shadows
       style={{width:'100%', height:'100%'}}
